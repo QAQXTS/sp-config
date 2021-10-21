@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: order-service
+  cloud:
+    config:
+      override-none: true
+
+server:
+  port: 8201
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka,http://eureka1:2002/eureka
+ribbon:
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2

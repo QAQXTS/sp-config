@@ -1,0 +1,20 @@
+
+#向注册中心注册的文件
+spring:
+  application:
+    name: item-service
+  cloud:
+    config:
+      override-none: true
+#item  8001
+#user  8101
+#order 8201
+server:
+  port: 8001
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka,http://eureka1:2002/eureka
